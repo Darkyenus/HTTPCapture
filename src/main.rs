@@ -18,7 +18,7 @@ async fn index(data: Data<CapturedRequests>) -> impl Responder {
                         let mut list = Container::new(ContainerType::UnorderedList);
 
                         for (id, capture) in &*req {
-                            list.add_link(format!("/download/{}", id), format!("Download capture #{id} ({} bytes)", capture.len()))
+                            list.add_link(format!("download/{}", id), format!("Download capture #{id} ({} bytes)", capture.len()))
                         }
 
                         list
