@@ -133,7 +133,7 @@ async fn main() -> std::io::Result<()> {
             .route("/download/{id}", web::get().to(download))
             .route("/", web::get().to(index))
     })
-        .bind(("0.0.0.0", 8080))?
+        .bind(("0.0.0.0", 8000))?
         .run()
         .await
 }
